@@ -6,3 +6,9 @@ script:
   - "yarn run test"
 after_success:
   - "yarn run coverage"
+deploy:
+  provider: npm
+  email: alexreardon@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
